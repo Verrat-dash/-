@@ -18,11 +18,25 @@ double cos(double c, int N) {
     }
     return s;
 }
+
 int main() {
     int i, m = 7; //дабы 7 первых косинусов высвечивалось(m)
     double x;
-    cout << "Enter x=";//набираем x
-    cin >> x;
+    cout<< "Enter only a number \n";
+    //cout << "Enter x=";//набираем x
+   // cin >> x;
+            while(true)
+        {
+            cout << "Enter x= : ";
+            cin >> x;
+            if(!cin)
+            {
+            cout << "x is not entered correctly\n"; //x вводится неправильно
+            cin.clear();
+            while (cin.get() != '\n');
+            }
+            else break;
+        }
     for (i = 1; i <= m; i++) {
         cout << i << ":cos(" << x << ")=" << cos(x, i) << "\n";}
     cout << "-----------------\n";//чтобы была пустая строка
