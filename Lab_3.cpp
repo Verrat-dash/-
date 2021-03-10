@@ -8,9 +8,8 @@ int main()
     setlocale(LC_ALL, "Russian");
     int i;
     double a[3];
-    double res = 0;//переменная для хранения результата
-    int index = 0;//переменная для хранения результата
-    //cout << "Введите элементы массива a: ";
+    double res = 0; //переменная для хранения результата
+    int index = 0; //переменная для хранения результатa
 
             while(index < 3) {
         cout << "Введите элементы массива a: ";
@@ -20,7 +19,6 @@ int main()
             cout << "не верно введен элемент массива a\n";
             cin.clear();
             cin.ignore(32767,'\n');
-            //while (cin.get() != '\n');
         } else {
             index += 1;
         }
