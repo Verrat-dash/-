@@ -24,11 +24,10 @@ int main()
         }
     }
 
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 3; i++) 
         res += a[i]*a[i];
-    }  {
-    res = sqrt(res);
-    }
+        res = sqrt(res);
+    
     cout << "Результат = " << res << endl;
     system("pause");
     return 0;
