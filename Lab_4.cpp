@@ -7,13 +7,15 @@ using namespace std;
 
 int fib(int n)
 {
-    if (n > 2)
-    return fib(n-1) + fib(n-2);
-    else return 1;
+    if(n < 1) return 0;
+    if(n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);//складываем предыдущие 2 числа
 }
 
 int main()
 {
-    cout << fib(6) << endl;
+    int n = 9;
+    cout << fib(n) << endl;
+    system("Pause");
     return 0;
 }
