@@ -2,7 +2,7 @@
 #include <Windows.h>
 using namespace std;
 
-int main()
+void func()
 {
     setlocale(LC_ALL,"Russian");
     SetConsoleCP(1251);
@@ -13,7 +13,6 @@ int main()
     cout << "Введите слово английскими буквами : ";
     gets(str);
     cout << "То, что получилось(Ура!): ";
-
     for(int i=0;i<strlen(str);i++)
     {
         for(int j=0;j<strlen(r);j++)//пока находится в r будет выводиться//каждую букву можно заменить, т.е если напишем j=j+2, то будет заменяться каждый второй символ
@@ -24,8 +23,10 @@ int main()
             }
         }
     }
+}
+int main() {
+    func();
     cout << "\n";
-    delete str;
     system("pause");
     return 0;
 }
