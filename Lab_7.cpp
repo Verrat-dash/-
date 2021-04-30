@@ -4,9 +4,14 @@ using namespace std;
 
 class SimpleClass {
     public:
-    int x;};
-//Функция, для заполнения:
-    void set(double *a,int H,int x){
+    int x;
+    void message() // функция (метод класса) выводящая сообщение на экран
+    {
+        cout << "\Shto-to sdelal: Classes and Objects in C + +\n";
+    }
+    };
+//Функция, для заполнения массива:
+    void setK(double *a,int H,int x){
     int i;
     a[0]=1;
     for(i=1; i<= H; i++)
@@ -25,17 +30,20 @@ int main(){
     int i,N;
     double x;
     double *a;
- //Ввод параметров:
     MyObj1.x = 8;
-//Создание:
+//Создание массива:
     a=new double[N+1];
-//Заполнение:
-    set(a,N,MyObj1.x);
+//Заполнение массива:
+    setK(a,N,MyObj1.x);
 //Разные приближения для косинуса :
     for(i=1; i<=10; i++)
     cout<< MyCos(a,i)<<endl;
     cout << "-----------------\n";
-//Точное (вычисленное встроенной функцией) значение:
     cout << "cos(x) = " << cos(MyObj1.x) << endl;
+
+    SimpleClass objSimpleClass;
+    objSimpleClass.message(); // вызов функции класса message
+
+    system("pause");
     return 0;
 }
